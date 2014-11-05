@@ -35,8 +35,11 @@ long double SIN(int number,long double count[],int len)
 	if(function_array[number].std_number==len)
 	{
 	   if((int)(count[0]/PI)==count[0]/PI)
-		   return sin(0.0);
-		else return sin(count[0]);
+		    return sin(0.0);
+		else 
+		{
+			return sin(count[0]*PI/180);
+	    }
 	}
 		return SINT;
 	
@@ -48,7 +51,7 @@ long double COS(int number,long double count[],int len)
 	{
 		if((int)(count[0]/PI/2)==count[0]/PI/2 && (int)(count[0]/PI)%2 != 0)
 		    return 0.0;
-		return cos(count[0]);
+		return cos(count[0]*PI/180);
 	}
 	return SINT;
 }
@@ -60,7 +63,7 @@ long double TAN(int number,long double count[],int len)
 		//if((int)fmod(count[0],PI)==0&&abs(fmod(count[0]/PI,2))==1)
 			///return SINT;
 		//else
-		return tan(count[0]);
+		return tan(count[0]*PI/180);
 	}
 	return SINT;
 }
