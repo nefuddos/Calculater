@@ -275,7 +275,7 @@ temp_dispose: if(temp_dispose_flag==1)//处理参数为，字符串为
 						
 						result=function_dispose(number+1,function_array[number].array,function_array[number].canshu_number);
 						//这里函数调用完以后需要将函数初始化
-						cout<<"the result of function is"<<result<<endl;
+					//	cout<<"the result of function is"<<result<<endl;
 
 						memset(function_array[number].array,0,sizeof(function_array[number].array));
 						function_array[number].canshu_number=0;
@@ -292,17 +292,17 @@ temp_dispose: if(temp_dispose_flag==1)//处理参数为，字符串为
 						}
 						else if(!func_stack.empty()&&(function_array[func_stack.top()].temp[0]!='\0'||judge(str[i+1])))
 							{
-								cout<<"转化前的结果为："<<result<<endl;
+								//cout<<"转化前的结果为："<<result<<endl;
 								_gcvt((double)result,6,receive);
-								cout<<"转化为字符串的运算数字"<<receive<<endl;
+								//cout<<"转化为字符串的运算数字"<<receive<<endl;
 								temp_dispose_flag=1;
 								goto temp_dispose;
 								
 							}
 						else{
-							cout<<"转化前的结果为："<<result<<endl;
+							//cout<<"转化前的结果为："<<result<<endl;
 							_gcvt((double)result,90,receive);
-							cout<<"转化为字符串的运算数字"<<receive<<endl;
+							//cout<<"转化为字符串的运算数字"<<receive<<endl;
 
 							int k_plus=strlen(receive);
 							strcat(str_copy,receive);
