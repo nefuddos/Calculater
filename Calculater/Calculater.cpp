@@ -1,4 +1,4 @@
-// Calculater.cpp : ¶¨Òå¿ØÖÆÌ¨Ó¦ÓÃ³ÌÐòµÄÈë¿Úµã¡£
+// Calculater.cpp : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨Ó¦ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµã¡£
 
 #include "stdafx.h"
 #include "Digit.h"
@@ -18,25 +18,25 @@
 using namespace std;
 
 #ifndef SINT
-#define SINT -1//Èç¹û·µ»ØÖµÎªÕâ¸öÊý£¬ËµÃ÷×Ö·û´Ü½ÓÊÜÓÐÎó£¬Ò²¾ÍÊÇËµ²ÎÊýµÄ´«µÝÓÐÎó£¬
+#define SINT -1//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ö·ï¿½ï¿½Ü½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #endif
 
 #ifndef MAIN
 #define MAIN
 #define MAX 100
 #define num 25
-const char func_array[num][20]={"SIN","COS","TAN","ARCSIN","ARCCOS","ARCTAN","SINH","COSH","TANH","LOG10","LN","EXP","FACT","SQRT","CUBEROOT","LOG","POW","MOD","YROOT","AVG","SUM","VAR","VARP","STDEV","STDEVP"};//º¯ÊýÃû×Ö
+const char func_array[num][20]={"SIN","COS","TAN","ARCSIN","ARCCOS","ARCTAN","SINH","COSH","TANH","LOG10","LN","EXP","FACT","SQRT","CUBEROOT","LOG","POW","MOD","YROOT","AVG","SUM","VAR","VARP","STDEV","STDEVP"};//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 typedef struct Fun{
- int canshu_number;//±íÊ¾´Ó×Ö·û´ÜÖÐ´«µÝµÄ²ÎÊýµÄ¸öÊý
- int std_number;//±íÊ¾º¯ÊýµÄ±ê×¼²ÎÊýµÄ¸öÊý
- int bracket;//±íÊ¾Õâ¸öº¯ÊýÖÐÀ¨ºÅÖÐµÄ¸öÊý
+ int canshu_number;//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+ int std_number;//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½×¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+ int bracket;//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ¸ï¿½ï¿½ï¿½
  int count;
- long double array[num];//½ÓÊÜ²ÎÊýÊý×é
+ long double array[num];//ï¿½ï¿½ï¿½Ü²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  char temp[MAX];
 }fun;
 fun function_array[num];
 #endif
-stack <int> func_stack;//º¯ÊýÕ»
+stack <int> func_stack;//ï¿½ï¿½ï¿½ï¿½Õ»
 bool judge_space(char r)
 {
 	if(r>='0'&&r<='9'||r=='+'||r=='-'||r=='*'||r=='/'||r=='%'||r=='^'||r=='.')
@@ -94,12 +94,12 @@ int look_find(char *temp)
 		if(strcmp(temp,func_array[i])==0)
 		{
 			//cout<<"find the function of number:"<<i+1<<endl;
-			return i;//·µ»Øº¯ÊýµÄ±àºÅ
+			return i;//ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½
 			
 		}
 		
 	}
-	if(i>=num)//·ñÔò£¬ÔòÊäÈëÓÐÎó
+	if(i>=num)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		return -1;
 	
 }
@@ -132,7 +132,7 @@ long double func(char *str)
 			  temp_len=strlen(temp_name);
 			  i+=temp_len;
 			  p=zhuanhua_daxie(temp_name);
-		    //¶ÔÓÚLOG10ÕâÖÖÌØÊâÇé¿öµÄÅÐ¶Ï
+		    //ï¿½ï¿½ï¿½ï¿½LOG10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 			if(strcmp(p,"LOG")==0&&str[i]=='1'&&str[i+1]=='0')
 			{
 				temp_name[temp_len]='1';
@@ -141,30 +141,30 @@ long double func(char *str)
 				i=i+2;
 			}
 
-			//¶ÔÓÚmodÎªÔËËã·ûµÄ´¦Àí
+			//ï¿½ï¿½ï¿½ï¿½modÎªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
 			if(strcmp(p,"MOD")==0&&(str[i]>='0'&&str[i]<='9'))
 			{
 				replase_flag=1;
 				memset(temp_name,'\0',MAX);
 				goto  ddos;                                           
 			}
-			number=look_find(p);//·µ»Øº¯ÊýµÄ±êºÅ
+			number=look_find(p);//ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½
 
 			if(number==-1)
 			{
-			    //cout<<"ÊäÈëÓÐÎó"<<endl;
+			    //cout<<"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"<<endl;
 				return SINT;
 			}
 			func_stack.push(number);
-			//cout<<"µ±Ç°º¯ÊýÎª"<<func_stack.top()<<endl;
+			//cout<<"ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Îª"<<func_stack.top()<<endl;
 			memset(temp_name,'\0',MAX);
 			
 			continue;
 		}
 		if(str[i]==']'||str[i]=='['||str[i]==' ')
 		{
-			if(i<len-1&&i>0&&str[i]==' '&&judge_space(str[i-1])&&judge_space(str[i+1]))//Èç¹û³öÏÖ¿Õ¸ñ£¬¶øÇÒ¿Õ¸ñµÄÇ°ºó¶¼ÊÇÊý×Ö»òÔòÔËËã·û£¬
-				//ÄÇÃ´¾Í·µ»Ø´íÎóÀàÐÍ£¬µ«ÊÇÔÚ·µ»ØÖ®Ç°,Ó¦¸Ã½«ÎÒ½¨Á¢µÄº¯ÊýÕ»µÄÐÅÏ¢Çå¿Õ
+			if(i<len-1&&i>0&&str[i]==' '&&judge_space(str[i-1])&&judge_space(str[i+1]))//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¿Õ¸ñ£¬¶ï¿½ï¿½Ò¿Õ¸ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//ï¿½ï¿½Ã´ï¿½Í·ï¿½ï¿½Ø´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½Ö®Ç°,Ó¦ï¿½Ã½ï¿½ï¿½Ò½ï¿½ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½
 			{
 				while(!func_stack.empty())
 				  func_stack.pop();
@@ -174,11 +174,11 @@ long double func(char *str)
 			continue;
 		}
 		
-		if(!func_stack.empty())//ËµÃ÷ÒÑ¾­ÔÚ½øÈëÄ³Ò»¸öº¯ÊýÖÐ
+		if(!func_stack.empty())//Ëµï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½Ú½ï¿½ï¿½ï¿½Ä³Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		{
 			if(function_array[func_stack.top()].bracket==0&&str[i]=='(')
 			{
-				function_array[func_stack.top()].bracket++;//º¯Êý×÷ÓÃÓòµÄ¿ªÊ¼
+				function_array[func_stack.top()].bracket++;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ê¼
 				i++;
 				continue;
 			}
@@ -198,7 +198,7 @@ long double func(char *str)
 					function_array[func_stack.top()].temp[function_array[func_stack.top()].count++]=str[i];
 					function_array[func_stack.top()].bracket++;
 
-temp_dispose: if(temp_dispose_flag==1)//´¦Àí²ÎÊýÎª£¬×Ö·û´®Îª
+temp_dispose: if(temp_dispose_flag==1)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Îª
 			  {
 				 
 					strcat(function_array[func_stack.top()].temp,receive);
@@ -221,13 +221,13 @@ temp_dispose: if(temp_dispose_flag==1)//´¦Àí²ÎÊýÎª£¬×Ö·û´®Îª
 					continue;
 				}
 
-				if(str[i]==','&&function_array[func_stack.top()].temp[0]!='\0')//ÕâÀïµÄÅÐ¶ÏÊÇ·ñÕýÈ·ÄØ£¿£¿
+				if(str[i]==','&&function_array[func_stack.top()].temp[0]!='\0')//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½Ø£ï¿½ï¿½ï¿½
 				{
 					//cout<<function_array[func_stack.top()].temp<<endl;
 					int l=strlen(function_array[func_stack.top()].temp);
 					function_array[func_stack.top()].temp[l]='#';
 					l++;
-					result=string_temp_dispose(function_array[func_stack.top()].temp,l);//±í´ïÊ½´¦Àíº¯Êý
+					result=string_temp_dispose(function_array[func_stack.top()].temp,l);//ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 					memset(function_array[func_stack.top()].temp,'\0',MAX);
 					//cout<<result<<endl;
@@ -258,7 +258,7 @@ temp_dispose: if(temp_dispose_flag==1)//´¦Àí²ÎÊýÎª£¬×Ö·û´®Îª
 					function_array[func_stack.top()].temp[l]='#';
 					l++;
 					//cout<<"the temp is"<<function_array[func_stack.top()].temp<<endl;
-					result = string_temp_dispose(function_array[func_stack.top()].temp,l);//±í´ïÊ½´¦Àíº¯Êý
+					result = string_temp_dispose(function_array[func_stack.top()].temp,l);//ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					//cout<<"the result is"<<result<<endl;
 					memset(function_array[func_stack.top()].temp,'\0',MAX);
 					function_array[func_stack.top()].count=0;
@@ -268,13 +268,13 @@ temp_dispose: if(temp_dispose_flag==1)//´¦Àí²ÎÊýÎª£¬×Ö·û´®Îª
 				}
 
 				function_array[func_stack.top()].bracket--;
-				if(function_array[func_stack.top()].bracket==0)//±íÊ¾µ±Ç°º¯ÊýµÄ½áÊø
+				if(function_array[func_stack.top()].bracket==0)//ï¿½ï¿½Ê¾ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½
 				{
 						number=func_stack.top();
 						func_stack.pop();
 						
 						result=function_dispose(number+1,function_array[number].array,function_array[number].canshu_number);
-						//ÕâÀïº¯Êýµ÷ÓÃÍêÒÔºóÐèÒª½«º¯Êý³õÊ¼»¯
+						//ï¿½ï¿½ï¿½ïº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
 					//	cout<<"the result of function is"<<result<<endl;
 
 						memset(function_array[number].array,0,sizeof(function_array[number].array));
@@ -284,7 +284,7 @@ temp_dispose: if(temp_dispose_flag==1)//´¦Àí²ÎÊýÎª£¬×Ö·û´®Îª
 						{
 							return SINT;
 						}
-						//´ÓÕâÒ»ÏÂÐèÒªÐÞ¸Ä£¡ÀàÐÍ¡£¡£º¯Êý²ÎÊýÊÇÊý×Ö¼Óº¯ÊýµÄÀàÐÍ
+						//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Òªï¿½Þ¸Ä£ï¿½ï¿½ï¿½ï¿½Í¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼Óºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						if((str[i+1]==','||i+1>=len||str[i+1]==']')&&!func_stack.empty()&&function_array[func_stack.top()].temp[0]=='\0')
 						{
 							//cout<<"the result is"<<result<<endl;
@@ -292,17 +292,17 @@ temp_dispose: if(temp_dispose_flag==1)//´¦Àí²ÎÊýÎª£¬×Ö·û´®Îª
 						}
 						else if(!func_stack.empty()&&(function_array[func_stack.top()].temp[0]!='\0'||judge(str[i+1])))
 							{
-								//cout<<"×ª»¯Ç°µÄ½á¹ûÎª£º"<<result<<endl;
+								//cout<<"×ªï¿½ï¿½Ç°ï¿½Ä½ï¿½ï¿½Îªï¿½ï¿½"<<result<<endl;
 								_gcvt((double)result,6,receive);
-								//cout<<"×ª»¯Îª×Ö·û´®µÄÔËËãÊý×Ö"<<receive<<endl;
+								//cout<<"×ªï¿½ï¿½Îªï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"<<receive<<endl;
 								temp_dispose_flag=1;
 								goto temp_dispose;
 								
 							}
 						else{
-							//cout<<"×ª»¯Ç°µÄ½á¹ûÎª£º"<<result<<endl;
+							//cout<<"×ªï¿½ï¿½Ç°ï¿½Ä½ï¿½ï¿½Îªï¿½ï¿½"<<result<<endl;
 							_gcvt((double)result,90,receive);
-							//cout<<"×ª»¯Îª×Ö·û´®µÄÔËËãÊý×Ö"<<receive<<endl;
+							//cout<<"×ªï¿½ï¿½Îªï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"<<receive<<endl;
 
 							int k_plus=strlen(receive);
 							strcat(str_copy,receive);
@@ -328,7 +328,7 @@ temp_dispose: if(temp_dispose_flag==1)//´¦Àí²ÎÊýÎª£¬×Ö·û´®Îª
 				str_copy[k_digit++]='%';
 				}
 				
-				//±íÃ÷×Ö·û´ÜµÄÒ»¿ªÊ¼¾ÍÊÇÊý×Ö±í´ïÊ½£¬ÄÇÃ´Ö±½Ó¿¼Èëµ½str_copyÖÐ£¬
+				//ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½Üµï¿½Ò»ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½Ã´Ö±ï¿½Ó¿ï¿½ï¿½ëµ½str_copyï¿½Ð£ï¿½
 				str_copy[k_digit++]=str[i];
 				i++;
 				continue;
@@ -369,9 +369,9 @@ int precision(long double p)
 
 int main()
 {
-	cout<<"              ¿ÆÑ§¼ÆËãÆ÷              "<<endl;
+	cout<<"              Scientific Calculator              "<<endl;
 	cout<<"**************************************"<<endl;
-	cout<<"ÇëÊäÈëÔËËã±í´ïÊ½(ÊäÈëquitÍË³ö³ÌÐò)£ºeg: 1+1 »Ø³µ"<<endl;
+	cout<<"Please enter the operation expression (enter quit to exit the program): eg: 1+1 Enter"<<endl;
 	char str[MAX];
 	long double p;
 	cin.getline(str,MAX);
@@ -382,11 +382,10 @@ int main()
 		if( p!=SINT )
 			printf(" ans = %.*f\n",precision(p) ,p);
 		else
-			cout<<"ÊäÈëÊý¾ÝÓÐÎó!"<<endl;
+			cout<<"Incorrect data entered!"<<endl;
 
       	memset(str,'\0',MAX);
 		cout<<endl;
-		//cout<<"ÇëÊäÈëÔËËã±í´ïÊ½(ÊäÈëquitÍË³ö³ÌÐò)£º"<<endl;
 		cin.getline(str,MAX);
 	}
 	return 0;

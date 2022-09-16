@@ -194,7 +194,8 @@ FakesAssemblies/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -228,3 +229,9 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# gnfiles
+.gnfiles
+.gn
+compile_commands.json
+project.code-workspace

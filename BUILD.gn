@@ -1,0 +1,5 @@
+executable("calculater") {
+  sources = [
+    "Calculater/Calculater.cpp"
+  ]
+}
