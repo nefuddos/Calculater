@@ -387,6 +387,7 @@ int main()
       	memset(str,'\0',MAX);
 		cout<<endl;
 		cin.getline(str,MAX);
+		cout<<add two numbers"a+b"
 	}
 	return 0;
 }
