@@ -20,3 +20,4 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+cout<<add two numbers"a+b"A
